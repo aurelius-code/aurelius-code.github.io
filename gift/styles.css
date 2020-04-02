@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Century Gothic";
+	box-sizing: border-box;
+}
+body {
+	margin: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	position: relative;
+	animation: change 10s ease-in-out infinite; 
+}
+
+h2 {
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+p {
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 2px;
+	border-radius: 40px;
+	margin: 10px 0;
+	padding: 12px 36px;
+	background: linear-gradient(90deg, #755bea, #ff72c0);
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 1000px;
+
+}
+.container .box {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	overflow: hidden;
+	border-radius: .9rem;
+	background-color: #fff;
+}
+.container .box .image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 1.5s ease-in-out;
+}
+.container .box:hover .image {
+	transform: translateY(-100%);
+}
+.container .box .image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.button {
+	left: 50%;
+}
+
+@keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+
+}
